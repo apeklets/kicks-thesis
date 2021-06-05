@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "wavenet"
+version= "0.1.0"
+description=""
+authors=["golbin"]
+
+[tool.poetry.dependencies]
+python = "3.8.*"
+numpy = "^1.20.0"
+librosa = "^0.8.0"
+ 

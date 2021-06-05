@@ -1,0 +1,6 @@
+.idea/*
+.ipynb_checkpoints/*
+*.swp
+*.out
+*.err
+__pycache__

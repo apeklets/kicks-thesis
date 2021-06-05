@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "wavernn-pytorch"
+version= "0.1.0"
+description=""
+authors=["fatchord"]
+
+[tool.poetry.dependencies]
+python = "3.8.*"
+numpy = "^1.20.0"
+librosa = "^0.8.0"
+matplotlib = "3.*"
+unidecode = "*"
+inflect = "*"
+nltk = "*"

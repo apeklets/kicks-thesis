@@ -1,0 +1,57 @@
+{
+    "name": "mag-if_44k",
+    "comments": "dummy_configuration",
+    "output_path": "../../results/local/pgan",
+    "loaderConfig": {
+        "data_path": "../../sampleset/augm",
+        "overwrite": false,
+        "shuffle": false,
+        "load_metadata": false,
+        "size": 9100,
+        "sample_rate": 44100,
+        "audio_length": 25000
+    },
+        
+    "transformConfig": {
+	"transform": "stft",
+        "fade_out": true,
+        "fft_size": 1024,
+        "win_size": 1024,
+        "n_frames": 64,
+        "hop_size": 256,
+        "log": true,
+        "ifreq": true,
+        "sample_rate": 44100,
+        "audio_length": 25000
+    },
+    "modelConfig": {
+        "formatLayerType": "default",
+        "ac_gan": false,
+        "downSamplingFactor": [
+            [16, 16],
+            [8, 8],
+            [4, 4],
+            [2, 2],
+            [1, 1]
+        ],
+        "imagefolderDataset": true,
+        "maxIterAtScale": [150000, 150000, 150000, 300000, 300000],
+        "alphaJumpMode": "linear",
+        "alphaNJumps": [600, 600, 600, 600, 1200],
+        "alphaSizeJumps": [32, 32, 32, 32, 32],
+        "transposed": false,
+        "depthScales": [5, 5, 5, 5, 5],
+        "miniBatchSize": [8, 8, 8, 4, 4],
+        "dimLatentVector": 8,
+        "perChannelNormalization": true,
+        "lossMode": "WGANGP",
+        "lambdaGP": 10.0,
+        "leakyness": 0.02,
+        "miniBatchStdDev": true,
+        "baseLearningRate": 0.0006,
+        "dimOutput": 2,
+        "attribKeysOrder": {},
+        "startScale": 0,
+        "skipAttDfake": [false]
+    }
+}

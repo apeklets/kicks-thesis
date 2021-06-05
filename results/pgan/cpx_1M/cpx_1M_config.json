@@ -1,0 +1,108 @@
+{
+    "name": "cpx_1M",
+    "comments": "dummy_configuration",
+    "output_path": "/ceph/csedu-scratch/project/wdamen/thesis-experiments/results/pgan",
+    "loaderConfig": {
+        "data_path": "/ceph/csedu-scratch/project/wdamen/thesis-experiments/sampleset/augm",
+        "overwrite": false,
+        "shuffle": false,
+        "load_metadata": false,
+        "size": 9100,
+        "sample_rate": 44100,
+        "audio_length": 26000
+    },
+    "transformConfig": {
+        "transform": "stft",
+        "fade_out": true,
+        "fft_size": 1024,
+        "win_size": 1024,
+        "n_frames": 64,
+        "hop_size": 256,
+        "log": false,
+        "ifreq": false,
+        "sample_rate": 44100,
+        "audio_length": 26000
+    },
+    "modelConfig": {
+        "formatLayerType": "default",
+        "ac_gan": false,
+        "downSamplingFactor": [
+            [
+                16,
+                16
+            ],
+            [
+                8,
+                8
+            ],
+            [
+                4,
+                4
+            ],
+            [
+                2,
+                2
+            ],
+            [
+                1,
+                1
+            ]
+        ],
+        "imagefolderDataset": true,
+        "maxIterAtScale": [
+            200000,
+            200000,
+            200000,
+            200000,
+            300000
+        ],
+        "alphaJumpMode": "linear",
+        "alphaNJumps": [
+            600,
+            600,
+            600,
+            600,
+            1200
+        ],
+        "alphaSizeJumps": [
+            32,
+            32,
+            32,
+            32,
+            32
+        ],
+        "transposed": false,
+        "depthScales": [
+            5,
+            5,
+            5,
+            5,
+            5
+        ],
+        "miniBatchSize": [
+            8,
+            8,
+            8,
+            8,
+            8
+        ],
+        "dimLatentVector": 8,
+        "perChannelNormalization": true,
+        "lossMode": "WGANGP",
+        "lambdaGP": 10.0,
+        "leakyness": 0.02,
+        "miniBatchStdDev": true,
+        "baseLearningRate": 0.0002,
+        "dimOutput": 2,
+        "attribKeysOrder": {},
+        "startScale": 0,
+        "skipAttDfake": [
+            false
+        ],
+        "output_shape": [
+            2,
+            512,
+            64
+        ]
+    }
+}

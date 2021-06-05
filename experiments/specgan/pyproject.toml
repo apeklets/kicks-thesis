@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "specgan-tf"
+version= "0.1.0"
+description=""
+authors=["chrisdonahue"]
+
+[tool.poetry.dependencies]
+python = "3.8.*"
+scipy = "^1.0.0"
+matplotlib = "^3.0.2"
+librosa = "0.6.2"
+tensorflow = "2.4.1"
+ 
